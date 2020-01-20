@@ -25,7 +25,13 @@ def get_japanese_emoticon(path, emoticon)
 end
 
 def get_english_meaning(path, emoticon)
-  emoticons= YAML.load_file(path)
+  result = load_library(path)["get_emoticon"][emoticon]
+  if result
+    result
+  else
+    result="Sorry, that emoticon was not found"
+  end
+  result
   
   
   # code goes here
