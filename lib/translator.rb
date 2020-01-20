@@ -13,7 +13,7 @@ end
 
 def get_japanese_emoticon(path, emoticon)
   YAML.load_file(path)
-  result = YAML.load_file(path)["get_emoticon"][emoticon]
+  result = load_library(path)["get_emoticon"][emoticon]
   if result
     result
   else
