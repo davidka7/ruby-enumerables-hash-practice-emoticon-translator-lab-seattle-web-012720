@@ -8,7 +8,7 @@ def load_library(path)
   emoticons.each {|value,key|
   hash[:get_meaning][value[0]]=emoticons[key][1]
   hash[:get_emoticon][value[1]]=key}
-  has
+  hash
 end
 
 def get_japanese_emoticon
