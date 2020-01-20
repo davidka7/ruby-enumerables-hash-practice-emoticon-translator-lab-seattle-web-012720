@@ -5,7 +5,7 @@ def load_library(path)
   emoticons= YAML.load_file(path)
   hash={"get_meaning"=>{},
   "get_emoticon"=>{}}
-  emoticons.each {|value,key|
+  emoticons.each {|key,value|
   hash["get_emoticon"][value[0]]=emoticons[key][1]
   hash["get_meaning"][value[1]]=key}
   hash
