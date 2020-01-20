@@ -14,7 +14,9 @@ end
 def get_japanese_emoticon(path, emoticon)
   emoticons= YAML.load_file(path)
   result =emoticons["get_emoticon"][emoticon]
-  if result==nil 
+  if result
+    result
+  else
     result="Sorry, that emoticon was not found"
   end
   result
